@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Google_Sans, Jua } from "next/font/google";
+import { Inter, Jua } from "next/font/google";
 import "./globals.css";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-const googleSans = Google_Sans({
-  variable: "--font-google-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -28,12 +28,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${googleSans.variable} ${jua.variable} h-full antialiased`}
+      className={`${inter.variable} ${jua.variable} h-full antialiased`}
     >
       <body className="body">
         {/* min-h-full flex flex-col */}
         <Header></Header>
-        <main className="pt-24">
+        {/* <main className="pt-24"> */}
+        <main>
         {children}
         </main>
         <Footer></Footer>
